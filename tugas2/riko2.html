@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Nama dan NIM</title>
+    <link rel="stylesheet" href="riko2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Input Nama dan NIM</h1>
+        <button id="inputButton">Masukkan Data</button>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        document.getElementById('inputButton').onclick = function() {
+            let nama1 = prompt("Masukkan Nama Pertama:");
+            let nim1 = prompt("Masukkan NIM Pertama:");
+            let nama2 = prompt("Masukkan Nama Kedua:");
+            let nim2 = prompt("Masukkan NIM Kedua:");
+
+            let resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `
+                <h2>Hasil Input:</h2>
+                <p>Nama 1: ${nama1} - NIM 1: ${nim1}</p>
+                <p>Nama 2: ${nama2} - NIM 2: ${nim2}</p>`;
+        };
+    </script>
+</body>
+</html>
